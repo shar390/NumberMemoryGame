@@ -6,7 +6,7 @@ public class NumberMemory{
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        
+        // Generate 7 random numbers from 1 to 5
         int[] randomNumbers = new int[7];
         for (int i = 0; i < 7; i++) {
             randomNumbers[i] = random.nextInt(5) + 1;
@@ -18,7 +18,7 @@ public class NumberMemory{
         
         clearScreen();
 
-       
+        // Ask the user to input the remembered numbers
         int[] userNumbers = new int[7];
         for (int i = 0; i < 7; i++) {
             System.out.print("Type number " + (i + 1) + ": ");
@@ -41,8 +41,8 @@ public class NumberMemory{
 
         scanner.close();
     }
-
     
+    // Display the correct numbers
     private static void displayNumbers(int[] numbers, long duration) {
         long startTime = System.currentTimeMillis();
         long endTime = startTime + duration;
